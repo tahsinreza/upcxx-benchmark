@@ -2,12 +2,10 @@ When using 64/128 nodes, 6 ranks per node, UPC++ works fine.
 When using 64/128 nodes, 12 ranks per node, UPC++ displays the follwing runtime error and crashes:
 
 NOTICE: We recommend linking the debug version of GASNet to assist you in resolving this application issue.
-*** FATAL ERROR (proc 587): in gasnetc_qp_create() at 2/bld/GASNet-2021.9.0/ibv-conduit/gasnet_core_connect.c:749: Unexpected error Cannot all
-ocate memory (rc=1 errno=12) from ibv_create_qp()
+*** FATAL ERROR (proc 587): in gasnetc_qp_create() at 2/bld/GASNet-2021.9.0/ibv-conduit/gasnet_core_connect.c:749: Unexpected error Cannot allocate memory (rc=1 errno=12) from ibv_create_qp()
 NOTICE: Before reporting bugs, run with GASNET_BACKTRACE=1 in the environment to generate a backtrace. 
 NOTICE: We recommend linking the debug version of GASNet to assist you in resolving this application issue.
-*** FATAL ERROR (proc 364): in gasnetc_qp_create() at 4/bld/GASNet-2021.9.0/ibv-conduit/gasnet_core_connect.c:749: Unexpected error[1809/1809]
-ocate memory (rc=1 errno=12) from ibv_create_qp()
+*** FATAL ERROR (proc 364): in gasnetc_qp_create() at 4/bld/GASNet-2021.9.0/ibv-conduit/gasnet_core_connect.c:749: Unexpected error Cannot allocate memory (rc=1 errno=12) from ibv_create_qp()
 NOTICE: Before reporting bugs, run with GASNET_BACKTRACE=1 in the environment to generate a backtrace.
 NOTICE: We recommend linking the debug version of GASNet to assist you in resolving this application issue. 
  

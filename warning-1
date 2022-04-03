@@ -1,0 +1,13 @@
+WARNING: GASNET_USE_XRC disabled because HCA lacks support.
+         To suppress this message set environment variable
+         GASNET_USE_XRC=0 or reconfigure with --disable-ibv-xrc.
+WARNING: Beginning a potentially slow probe of max pinnable memory...
+WARNING: Probe of max pinnable memory completed in 42.0702s.
+WARNING:   Probe of max pinnable memory has yielded '83 GB'.
+WARNING:   If you have the same memory configuration on all nodes, then
+WARNING:   to avoid this probe in the future either reconfigure using
+WARNING:      --with-ibv-physmem-max='83 GB'
+WARNING:   or run with environment variable
+WARNING:      GASNET_PHYSMEM_MAX='83 GB'.
+WARNING: For more information see "Slow PHYSMEM probe at start-up"
+WARNING: in ibv-conduit's README.
