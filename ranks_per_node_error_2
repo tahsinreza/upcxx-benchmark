@@ -1,0 +1,57 @@
+When using 32 nodes, 6 ranks per node, UPC++ works fine.
+When using 32 nodes, 12 ranks per node, and high per process message volume, UPC++ displays the follwing runtime error and crashes:
+
+@ 289> snd status=TIMEOUT opcode=0 dst_node=330 dst_qp=2
+@ 289> - rcv 213 op(s) with status=12
+*** FATAL ERROR (proc 289): in gasnetc_snd_reap() at e4/bld/GASNet-2021.9.0/ibv-conduit/gasnet_core_sndrcv.c:843: aborting on reap of failed s
+end
+NOTICE: Before reporting bugs, run with GASNET_BACKTRACE=1 in the environment to generate a backtrace. 
+NOTICE: We recommend linking the debug version of GASNet to assist you in resolving this application issue.
+*** Caught a fatal signal (proc 289): SIGABRT(6)
+@ 202> snd status=TIMEOUT opcode=0 dst_node=330 dst_qp=3
+@ 22> snd status=TIMEOUT opcode=0 dst_node=330 dst_qp=2
+@ 43> snd status=TIMEOUT opcode=0 dst_node=330 dst_qp=2
+@ 202> - rcv CQ contains impossibly large WCE count with status 12
+*** FATAL ERROR (proc 202): in gasnetc_snd_reap() at e4/bld/GASNet-2021.9.0/ibv-conduit/gasnet_core_sndrcv.c:843: aborting on reap of failed s
+end
+@ 22> - rcv CQ contains impossibly large WCE count with status 12
+*** FATAL ERROR (proc 22): in gasnetc_snd_reap() at e4/bld/GASNet-2021.9.0/ibv-conduit/gasnet_core_sndrcv.c:843: aborting on reap of failed se
+nd
+@ 103> snd status=TIMEOUT opcode=0 dst_node=330 dst_qp=3
+*** FATAL ERROR (proc 103): in gasnetc_snd_reap() at e4/bld/GASNet-2021.9.0/ibv-conduit/gasnet_core_sndrcv.c:843: aborting on reap of failed s
+end
+NOTICE: Before reporting bugs, run with GASNET_BACKTRACE=1 in the environment to generate a backtrace. 
+NOTICE: We recommend linking the debug version of GASNet to assist you in resolving this application issue.
+@ 45> snd status=TIMEOUT opcode=0 dst_node=330 dst_qp=2
+@ 45> - rcv 362 op(s) with status=12
+*** FATAL ERROR (proc 45): in gasnetc_snd_reap() at e4/bld/GASNet-2021.9.0/ibv-conduit/gasnet_core_sndrcv.c:843: aborting on reap of failed se
+nd
+NOTICE: Before reporting bugs, run with GASNET_BACKTRACE=1 in the environment to generate a backtrace. 
+
+*** Caught a fatal signal (proc 219): SIGABRT(6)
+@ 81> snd status=TIMEOUT opcode=0 dst_node=330 dst_qp=2
+@ 290> snd status=TIMEOUT opcode=0 dst_node=330 dst_qp=2
+*** FATAL ERROR (proc 290): in gasnetc_snd_reap() at e4/bld/GASNet-2021.9.0/ibv-conduit/gasnet_core_sndrcv.c:843: aborting on reap of failed s
+end
+*** FATAL ERROR (proc 81): in gasnetc_snd_reap() at e4/bld/GASNet-2021.9.0/ibv-conduit/gasnet_core_sndrcv.c:843: aborting on reap of failed se
+nd
+NOTICE: Before reporting bugs, run with GASNET_BACKTRACE=1 in the environment to generate a backtrace. 
+NOTICE: We recommend linking the debug version of GASNet to assist you in resolving this application issue.
+NOTICE: Before reporting bugs, run with GASNET_BACKTRACE=1 in the environment to generate a backtrace. 
+NOTICE: We recommend linking the debug version of GASNet to assist you in resolving this application issue.
+*** Caught a fatal signal (proc 81): SIGABRT(6)
+*** Caught a fatal signal (proc 290): SIGABRT(6)
+@ 313> snd status=TIMEOUT opcode=0 dst_node=330 dst_qp=2
+@ 11> snd status=TIMEOUT opcode=0 dst_node=330 dst_qp=2
+@ 313> - rcv CQ contains impossibly large WCE count with status 12
+@ 11> - rcv CQ contains impossibly large WCE count with status 12
+*** FATAL ERROR (proc 11): in gasnetc_snd_reap() at e4/bld/GASNet-2021.9.0/ibv-conduit/gasnet_core_sndrcv.c:843: aborting on reap of failed se
+nd
+NOTICE: Before reporting bugs, run with GASNET_BACKTRACE=1 in the environment to generate a backtrace. 
+NOTICE: We recommend linking the debug version of GASNet to assist you in resolving this application issue.
+*** Caught a fatal signal (proc 11): SIGABRT(6)
+@ 169> snd status=TIMEOUT opcode=0 dst_node=330 dst_qp=3
+*** FATAL ERROR (proc 169): in gasnetc_snd_reap() at e4/bld/GASNet-2021.9.0/ibv-conduit/gasnet_core_sndrcv.c:843: aborting on reap of failed s
+end
+
+
