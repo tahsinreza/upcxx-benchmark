@@ -35,7 +35,7 @@ cd /usr/workspace/reza2/upcxx/release4/
 ./bin/upcxx -std=c++17 -O3 -network=ibv -threadmode=seq ../example/prog-guide/hist3-rpc.cpp
 <br>
 
-Running application:
+Run application:
 <br>
 cd /usr/workspace/reza2/upcxx/release4/
 <br>
