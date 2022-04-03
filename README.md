@@ -3,7 +3,7 @@ UPC++ benchmark
 
 <h3>Setup details</h3> 
 
-Distributed compiler platform:
+Distributed platform:
 https://hpc.llnl.gov/hardware/compute-platforms/catalyst
 <br>
 
