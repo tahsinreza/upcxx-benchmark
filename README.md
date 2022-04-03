@@ -36,8 +36,11 @@ cd /usr/workspace/reza2/upcxx/release4/
 <br>
 
 Running application:
+<br>
 cd /usr/workspace/reza2/upcxx/release4/
+<br>
 srun -N16 --ntasks-per-node=12 -t4:00:00 --distribution=block a.out
+<br>
 srun -N64 --ntasks-per-node=6 -t4:00:00 --distribution=block a.out
 <br>
 
