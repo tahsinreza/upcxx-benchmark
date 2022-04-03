@@ -21,7 +21,7 @@ cd /usr/workspace/reza2/upcxx/release4
 ../configure --prefix=/usr/workspace/reza2/upcxx/release4/ --disable-mpi-compat --with-ibv-spawner=pmi --with-ibv-max-hcas=2
 <br>
 
-<a href=https://raw.githubusercontent.com/tahsinreza/upcxx-benchmark/main/catalyst\_build\_log">Build log</a>
+Build log: https://raw.githubusercontent.com/tahsinreza/upcxx-benchmark/main/catalyst-build-log
 <br>
 
 Compile application:
