@@ -2,7 +2,6 @@
 UPC++ benchmark
 
 <h3>Setup details</h3> 
-<br>
 
 Distributed compiler platform:
 https://hpc.llnl.gov/hardware/compute-platforms/catalyst
@@ -39,6 +38,7 @@ srun -N64 --ntasks-per-node=6 -t4:00:00 --distribution=block a.out
 
 Around the world:
 
+Assuming there are 10 ranks, first, rank 0 sends a message to rank 1. Upon hearing from rank 0, rank 1 sends a message to rank 2 and so forth. A single trip completes when rank 0 has received a message from rank 9. To complete n trips, each rank must send/receive n messages to/from their immediate neighbor (rank k receives from rank k -1 and sends to rank k+1).  
 <br>
 
 Histogram:
