@@ -18,8 +18,7 @@ void visit_next(void) {
   } 
 } 
 
-int main(int argc, char *argv[])
-{
+int main(int argc, char *argv[]) {
   // setup UPC++ runtime
   upcxx::init();
 
