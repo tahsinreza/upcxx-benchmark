@@ -26,7 +26,7 @@ Build log: https://raw.githubusercontent.com/tahsinreza/upcxx-benchmark/main/cat
 
 Compile application:
 <br>
-cd /usr/workspace/reza2/upcxx/release4/
+cd /usr/workspace/reza2/upcxx/release4
 <br>
 ./bin/upcxx -std=c++17 -O3 -network=ibv -threadmode=seq ../example/prog-guide/hello-world.cpp
 <br>
@@ -37,7 +37,7 @@ cd /usr/workspace/reza2/upcxx/release4/
 
 Run application:
 <br>
-cd /usr/workspace/reza2/upcxx/release4/
+cd /usr/workspace/reza2/upcxx/release4
 <br>
 srun -N16 --ntasks-per-node=12 -t4:00:00 --distribution=block artw.out
 <br>
