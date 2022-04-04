@@ -39,9 +39,9 @@ Run application:
 <br>
 cd /usr/workspace/reza2/upcxx/release4
 <br>
-srun -N16 --ntasks-per-node=12 -t4:00:00 --distribution=block artw.out
+srun -N16 --ntasks-per-node=12 -t4:00:00 --distribution=block artw-rpc
 <br>
-srun -N64 --ntasks-per-node=6 -t4:00:00 --distribution=block hist3.out
+srun -N64 --ntasks-per-node=6 -t4:00:00 --distribution=block hist3-rpc
 <br>
 
 <h3>Benchmark details</h3>
