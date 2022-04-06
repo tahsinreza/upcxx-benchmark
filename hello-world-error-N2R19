@@ -1,0 +1,32 @@
+ruby31.8001hfi_userinit_internal: assign_context command failed: Device or resource busy
+ruby31.8001hfp_gen1_context_open: hfi_userinit_internal: failed, trying again (1/3)
+ruby31.8001hfi_userinit_internal: assign_context command failed: Device or resource busy
+ruby31.8001hfp_gen1_context_open: hfi_userinit_internal: failed, trying again (2/3)
+ruby31.8001hfi_userinit_internal: assign_context command failed: Device or resource busy
+ruby31.8001hfp_gen1_context_open: hfi_userinit_internal: failed, trying again (3/3)
+ruby31.8001hfi_userinit_internal: assign_context command failed: Device or resource busy
+ruby366.215741hfi_userinit_internal: assign_context command failed: Device or resource busy
+ruby366.215741hfp_gen1_context_open: hfi_userinit_internal: failed, trying again (1/3)
+ruby366.215741hfi_userinit_internal: assign_context command failed: Device or resource busy
+ruby366.215741hfp_gen1_context_open: hfi_userinit_internal: failed, trying again (2/3)
+ruby366.215741hfi_userinit_internal: assign_context command failed: Device or resource busy
+ruby366.215741hfp_gen1_context_open: hfi_userinit_internal: failed, trying again (3/3)
+ruby366.215741hfi_userinit_internal: assign_context command failed: Device or resource busy
+
+ruby31.8001PSM2 can't open hfi unit: -1 (err=23)
+*** FATAL ERROR (proc 6): in gasnetc_ofi_init() at e-ruby-ofi/bld/GASNet-2022.3.0/ofi-conduit/gasnet_ofi.c:739: fi_endpoint for am reply endpoint failed: -22(Invalid argument)
+NOTICE: Before reporting bugs, run with GASNET_BACKTRACE=1 in the environment to generate a backtrace. 
+srun: error: ruby31: task 6: Aborted (core dumped)
+ruby366.215741PSM2 can't open hfi unit: -1 (err=23)
+*** FATAL ERROR (proc 20): in gasnetc_ofi_init() at e-ruby-ofi/bld/GASNet-2022.3.0/ofi-conduit/gasnet_ofi.c:739: fi_endpoint for am reply endpoint failed: -22(Invalid argument)
+NOTICE: Before reporting bugs, run with GASNET_BACKTRACE=1 in the environment to generate a backtrace. 
+srun: error: ruby366: task 20: Aborted (core dumped)
+srun: First task exited 30s ago
+srun: StepId=7706847.18 tasks 0-5,7-19,21-37: running
+srun: StepId=7706847.18 tasks 6,20: exited abnormally
+srun: launch/slurm: _step_signal: Terminating StepId=7706847.18
+slurmstepd: error: *** STEP 7706847.18 ON ruby31 CANCELLED AT 2022-04-05T18:22:11 ***
+slurmstepd: error: *** STEP 7706847.18 ON ruby31 CANCELLED AT 2022-04-05T18:22:11 ***
+srun: Job step aborted: Waiting up to 62 seconds for job step to finish.
+srun: error: ruby31: tasks 0-5,7-18: Killed
+srun: error: ruby366: tasks 19,21-37: Killed

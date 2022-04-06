@@ -1,0 +1,19 @@
+ruby31.854hfi_userinit_internal: assign_context command failed: Device or resource busy
+ruby31.854hfp_gen1_context_open: hfi_userinit_internal: failed, trying again (1/3)
+ruby31.854hfi_userinit_internal: assign_context command failed: Device or resource busy
+ruby31.854hfp_gen1_context_open: hfi_userinit_internal: failed, trying again (2/3)
+ruby31.854hfi_userinit_internal: assign_context command failed: Device or resource busy
+ruby31.854hfp_gen1_context_open: hfi_userinit_internal: failed, trying again (3/3)
+ruby31.854hfi_userinit_internal: assign_context command failed: Device or resource busy
+
+ruby31.342911PSM2 can't open hfi unit: -1 (err=23)
+*** FATAL ERROR (proc 1): in gasnetc_ofi_init() at e-ruby-ofi/bld/GASNet-2022.3.0/ofi-conduit/gasnet_ofi.c:739: fi_endpoint for am reply endpoint failed: -22(Invalid argument)
+NOTICE: Before reporting bugs, run with GASNET_BACKTRACE=1 in the environment to generate a backtrace. 
+srun: error: ruby31: task 1: Aborted (core dumped)
+srun: First task exited 30s ago
+srun: StepId=7706847.12 tasks 0,2-18: running
+srun: StepId=7706847.12 task 1: exited abnormally
+srun: launch/slurm: _step_signal: Terminating StepId=7706847.12
+srun: Job step aborted: Waiting up to 62 seconds for job step to finish.
+slurmstepd: error: *** STEP 7706847.12 ON ruby31 CANCELLED AT 2022-04-05T18:11:55 ***
+srun: error: ruby31: tasks 0,2-18: Killed
