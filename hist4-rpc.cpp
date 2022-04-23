@@ -4,7 +4,7 @@
 #include <vector>
 #include <unistd.h>
 #include <upcxx/upcxx.hpp>
-#include "hist3-rpc-promises.hpp"
+#include "hist4-rpc-ff.hpp"
 #include "timers.hpp"
 
 // uncomment to disable assert()
@@ -46,6 +46,8 @@ int main(int argc, char *argv[]) {
   
   auto per_node_update_count = local_update_count * ranks_per_node;
 
+  auto global_send_count = local_update_count * upcxx::rank_n();
+
   if (upcxx::rank_me() == 0) {
     std::cout << upcxx::rank_n() << " " << log_global_table_size << " " << 
       local_table_size << " " << global_table_size << " " << 
@@ -56,7 +58,7 @@ int main(int argc, char *argv[]) {
   //std::cout << dmap.local_table_size() << std::endl;
 
   assert(dmap.local_table_size() == local_table_size);
-  
+
   std::vector<uint64_t> random_global_table_indices(local_update_count, 0); 
 
   std::mt19937 rnd_gen(upcxx::rank_me());
@@ -79,22 +81,23 @@ int main(int argc, char *argv[]) {
   // beginning of distributed processing
 
   auto start_time = timer_start();                                                                                                         
-
-  upcxx::promise<> prom_all_done;
  
-  for (uint64_t i = 0; i < random_global_table_indices.size(); i++) {
+  for (uint64_t i = 0; i < global_send_count; i++) {
     
-    const int target_rank = 
-      (int)(random_global_table_indices[i] % upcxx::rank_n());
+    if (i < random_global_table_indices.size()) {    
 
-    if (target_rank != upcxx::rank_me()) {
-      // remote update
-      dmap.remote_update(random_global_table_indices[i], target_rank, 
-        prom_all_done); 
-    } else {
-      // local update
-      dmap.local_update(random_global_table_indices[i]);
-    }
+      const int target_rank = 
+        (int)(random_global_table_indices[i] % upcxx::rank_n());
+
+      if (target_rank != upcxx::rank_me()) {
+        // remote update
+        dmap.remote_update(random_global_table_indices[i], target_rank);       
+      } else {
+        // local update
+        dmap.local_update(random_global_table_indices[i]);
+      }
+
+    } // if
 
     // periodically call progress to allow incoming RPCs to be processed
     if (i % 10 == 0) {  
@@ -103,8 +106,13 @@ int main(int argc, char *argv[]) {
 
   } // for
 
-  upcxx::future<> fut_all_done = prom_all_done.finalize();
-  fut_all_done.wait(); 
+  bool done = false;
+
+  do {
+    auto global_receive_count = upcxx::reduce_all(
+      DistrMap::get_local_recv_count(), upcxx::op_fast_add).wait();
+    done = (global_send_count == global_receive_count); 
+  } while (!done);
 
   upcxx::barrier(); 
 
@@ -121,11 +129,12 @@ int main(int argc, char *argv[]) {
 
   if (upcxx::rank_me() == 0) {
     std::cout << "Updates per second: " << updates_per_second << std::endl;
+    //std::cout << "Rank " << upcxx::rank_me() << ", #Local updates: " << 
+    //  DistrMap::get_local_recv_count() << std::endl;
   }
 
-  // sanity checks 
+  // sanity checks
 
-  auto global_send_count = local_update_count * upcxx::rank_n(); 
   auto global_receive_count = upcxx::reduce_all(
     DistrMap::get_local_recv_count(), upcxx::op_fast_add).wait();
   if (upcxx::rank_me() == 0) {                                                                                                               

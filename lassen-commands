@@ -1,0 +1,22 @@
+head -n1000 /sys/class/infiniband/*/board_id
+==> /sys/class/infiniband/mlx5_0/board_id <==
+IBM0000000002
+ 
+==> /sys/class/infiniband/mlx5_1/board_id <==
+IBM0000000002
+ 
+==> /sys/class/infiniband/mlx5_2/board_id <==
+IBM0000000002
+ 
+==> /sys/class/infiniband/mlx5_3/board_id <==
+IBM0000000002
+
+========
+
+module load gcc/8.3.1
+
+========
+
+../configure --prefix=/usr/workspace/reza2/upcxx-2022.3.0/release-lassen-ibv-hcas-4 --with-ibv-spawner=mpi --with-cxx=mpicxx --with-ibv-max-hcas=4
+
+========

@@ -25,11 +25,8 @@ public :
     return (int)(key % upcxx::rank_n());
   }
 
-  void remote_update(const uint64_t &key, const uint64_t &target_rank, 
-    upcxx::promise<> &prom) {
-    upcxx::rpc(target_rank, //get_target_rank(key),
-      // completion is a promise
-      upcxx::operation_cx::as_promise(prom),
+  void remote_update(const uint64_t &key, const uint64_t &target_rank) { 
+    upcxx::rpc_ff(target_rank, //get_target_rank(key),
       // lambda 
       [](dobj_map_t &lmap, const uint64_t &key) {
         uint64_t local_table_index = key / upcxx::rank_n();
