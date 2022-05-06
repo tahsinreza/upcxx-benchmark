@@ -17,11 +17,11 @@ module load gcc/8.3.1
 
 ========
 
-With XRC
+XRC enabled
 
 ../configure --prefix=/usr/workspace/reza2/upcxx-2022.3.0/release-lassen-ibv-hcas-4 --with-ibv-spawner=mpi --with-cxx=mpicxx --with-ibv-max-hcas=4
 
-Without XRC
+XRC disabled
 
 ../configure --prefix=/usr/workspace/reza2/upcxx-2022.3.0/release-lassen-ibv-hcas-4-ODP --with-ibv-spawner=mpi --with-cxx=mpicxx --with-ibv-max-hcas=4 --disable-ibv-xrc
 
@@ -46,6 +46,7 @@ make test_install
 ========
 
 Compile and run applications
+(assuming the source files are in the /example/prog-guide directory) 
 
 ./bin/upcxx -std=c++17 -O3 -network=ibv -threadmode=seq -o artw-rpc.out ../example/prog-guide/artw-rpc.cpp
 
