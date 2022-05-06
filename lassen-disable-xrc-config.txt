@@ -1,0 +1,720 @@
+configure: creating cache ./config.cache
+checking for good shell... yes
+checking build system type... powerpc64le-unknown-linux-gnu
+checking host system type... powerpc64le-unknown-linux-gnu
+checking target system type... powerpc64le-unknown-linux-gnu
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /usr/bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking for package version...  GASNet 2022.3.0 https://gasnet.lbl.gov
+checking for configure arguments... 
+configure args: '--with-ibv-spawner=mpi' '--with-ibv-max-hcas=4' '--disable-ibv-xrc' '--with-cc=/usr/tce/packages/gcc/gcc-8.3.1/bin/gcc' '--with-cflags=' '--with-cxx=/usr/tce/packages/spectrum-mpi/spectrum-mpi-rolling-release-gcc-8.3.1/bin/mpicxx' '--with-cxxflags=' '--disable-parsync' '--enable-seq' '--enable-par' '--enable-pthreads' '--disable-segment-everything' '--disable-ibv-rcv-thread' '--enable-debug'
+checking if user enabled cross-compile... no
+checking for cached autoconf environment settings... 
+checking for CC setting...                 (provided) "/usr/tce/packages/gcc/gcc-8.3.1/bin/gcc"
+checking for CFLAGS setting...             (provided) ""
+checking for CPP setting...                (not set)
+checking for CPPFLAGS setting...           (not set)
+checking for LDFLAGS setting...            (not set)
+checking for LIBS setting...               (not set)
+checking for PERL setting...               (not set)
+checking for CXX setting...                (provided) "/usr/tce/packages/spectrum-mpi/spectrum-mpi-rolling-release-gcc-8.3.1/bin/mpicxx"
+checking for CXXCPP setting...             (not set)
+checking for CXXFLAGS setting...           (provided) ""
+checking for pwd... /usr/bin/pwd
+checking autoconf version... 2.69
+TOP_SRCDIR:     /usr/WS1/reza2/upcxx-2022.3.0/release-lassen-ibv-hcas-4-ODP/bld/GASNet-2022.3.0
+TOP_BUILDDIR:   /usr/WS1/reza2/upcxx-2022.3.0/release-lassen-ibv-hcas-4-ODP/bld/gasnet.debug
+system info:      lassen709 powerpc64le-unknown-linux-gnu
+build id:       Sat Apr 23 11:01:51 PDT 2022 reza2
+checking for gawk... (cached) gawk
+checking for perl5... no
+checking for perl... /usr/bin/perl
+checking for perl version 5.005 or later... yes: v5.16.3
+checking for GNU make... /usr/tcetmp/bin/gmake
+checking for GNU make... GNU Make 4.2.1
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+checking whether make supports the include directive... yes (GNU style)
+checking for gcc... /usr/tce/packages/gcc/gcc-8.3.1/bin/gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether /usr/tce/packages/gcc/gcc-8.3.1/bin/gcc accepts -g... yes
+checking for /usr/tce/packages/gcc/gcc-8.3.1/bin/gcc option to accept ISO C89... none needed
+checking whether /usr/tce/packages/gcc/gcc-8.3.1/bin/gcc understands -c and -o together... yes
+checking dependency style of /usr/tce/packages/gcc/gcc-8.3.1/bin/gcc... none
+checking how to run the C preprocessor... /usr/tce/packages/gcc/gcc-8.3.1/bin/gcc -E
+checking for gcc... (cached) /usr/tce/packages/gcc/gcc-8.3.1/bin/gcc
+checking whether we are using the GNU C compiler... (cached) yes
+checking whether /usr/tce/packages/gcc/gcc-8.3.1/bin/gcc accepts -g... (cached) yes
+checking for /usr/tce/packages/gcc/gcc-8.3.1/bin/gcc option to accept ISO C89... (cached) none needed
+checking whether /usr/tce/packages/gcc/gcc-8.3.1/bin/gcc understands -c and -o together... (cached) yes
+checking dependency style of /usr/tce/packages/gcc/gcc-8.3.1/bin/gcc... (cached) none
+checking how to run the C preprocessor... /usr/tce/packages/gcc/gcc-8.3.1/bin/gcc -E
+checking for full path expansion of CPP... /usr/tce/packages/gcc/gcc-8.3.1/bin/gcc -E
+checking for working C preprocessor... yes
+checking for full path expansion of CC... /usr/tce/packages/gcc/gcc-8.3.1/bin/gcc
+checking for working C compiler... yes
+checking working C compiler executables... yes
+checking whether ln -s works... yes
+checking whether byte ordering is bigendian ... 0
+checking for mpcc_r... no
+checking for C compiler family... GNU
+checking for gcc version string... 8.3.1 20190311 (Red Hat 8.3.1-3)
+checking for C compiler sub-family... GNU
+checking for known buggy compilers... ok
+checking for grep that handles long lines and -e... /usr/bin/grep
+checking for egrep... /usr/bin/grep -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking size of void *... 8
+checking for C compiler flag --param max-inline-insns-single=35000... yes
+checking for C compiler flag --param max-inline-insns=100000... no/error: cc1: error: invalid --param name 'max-inline-insns'; did you mean 'max-combine-insns'?
+checking for C compiler flag --param inline-unit-growth=10000... yes
+checking for C compiler flag --param large-function-growth=200000... yes
+checking for C compiler flag -Winline... yes
+checking for buggy -Winline... ok
+checking for working C99 printf specifiers... yes
+checking for PPC64 instruction support... yes
+checking for C compiler flag -Wall... yes
+checking for C compiler flag -Wpointer-arith... yes
+checking for C compiler flag -Wnested-externs... yes
+checking for C compiler flag -Wwrite-strings... yes
+checking for C compiler flag -Wmissing-format-attribute... yes
+checking for C compiler flag -Winit-self... yes
+checking for C compiler flag -Wvla... yes
+checking for C compiler flag -Wexpansion-to-defined... yes
+checking for C compiler flag -Woverlength-strings... yes
+checking for C compiler flag -Wclobbered... yes
+checking for C compiler flag -Wcast-function-type... yes
+checking for C compiler flag -Wempty-body... yes
+checking for C compiler flag -Wignored-qualifiers... yes
+checking for C compiler flag -Wimplicit-fallthrough... yes
+checking for C compiler flag -Wmissing-parameter-type... yes
+checking for C compiler flag -Wold-style-declaration... yes
+checking for C compiler flag -Wuninitialized... yes
+checking for C compiler flag -Wshift-negative-value... yes
+checking for C compiler flag -Wno-format-overflow... yes
+checking for C compiler flag -Wformat-overflow... yes
+checking for C compiler flag -Wno-format-truncation... yes
+checking for C compiler flag -Wformat-truncation... yes
+checking whether C compiler is gcc 11 or higher... no
+checking for C compiler flag -Wno-unused... yes
+checking for C compiler flag -Wunused... yes
+checking for C compiler flag -Wunused-result... yes
+checking for C compiler flag -Wno-unused-parameter... yes
+checking for C compiler flag -Wunused-parameter... yes
+checking for C compiler flag -Wno-address... yes
+checking for C compiler flag -Waddress... yes
+checking for buggy pthread.h mutex initializers... ok
+checking for C compiler flag ... yes
+checking for flags required for C99 subset compliance... none required
+checking for working GASNet-required ISO C99 subset... yes
+checking CC for debug vs. optimize compilation conflict... no
+checking for rpath option to $CC... "-Wl,-rpath,DIR"
+checking for libgcc link flags... -L/usr/tce/packages/gcc/gcc-8.3.1/rh/usr/bin/../lib/gcc/ppc64le-redhat-linux/8 -lgcc
+checking for __restrict__ keyword... yes
+checking for restrict qualifying typedefs... yes
+checking C compiler for 32-bit __sync atomics support... yes
+checking C compiler for 64-bit __sync atomics support... yes
+checking C compiler for inline modifier... yes
+checking C compiler for working 'static inline'... yes
+checking for __attribute__((__always_inline__))... yes
+checking for __attribute__((__noinline__))... yes
+checking for __attribute__((__malloc__))... yes
+checking for __attribute__((__warn_unused_result__))... yes
+checking for __attribute__((__used__))... yes
+checking for __attribute__((__may_alias__))... yes
+checking for __attribute__((__noreturn__))... yes
+checking for __attribute__((__const__))... yes
+checking for __attribute__((__pure__))... yes
+checking for __attribute__((__hot__))... yes
+checking for __attribute__((__cold__))... yes
+checking for __attribute__((__deprecated__))... yes
+checking for __attribute__((__common__))... yes
+checking for __attribute__((__fallthrough__))... yes
+checking for __attribute__((__format__))... yes
+checking for __attribute__((__format__)) on function pointers... yes
+checking for __attribute__((__format__)) on function pointers as arguments... yes
+checking for compiler flag -Wall... yes
+checking for compiler flag -Wextra... yes
+checking for compiler flag -Wunknown-pragmas... yes
+checking for pragma GCC diagnostic push/pop/ignored... yes
+checking for __assume... no
+checking for __builtin_assume... no
+checking for __builtin_unreachable... yes
+checking for __builtin_expect... yes
+checking for __builtin_constant_p... yes
+checking for __builtin_prefetch... yes
+checking for PLATFORM_COMPILER_IDSTR... |COMPILER_FAMILY:GNU|COMPILER_VERSION:8.3.1|COMPILER_FAMILYID:1|STD:__STDC__,__STDC_VERSION__=201710L|misc:8.3.1 20190311 (Red Hat 8.3.1-3)|
+checking for PLATFORM_COMPILER_FAMILYID... 1
+checking for PLATFORM_COMPILER_ID... 1
+checking for PLATFORM_COMPILER_VERSION... 525057
+checking for PLATFORM_COMPILER_C_LANGLVL... 201710
+checking building tentative definition helper object... ok
+checking for tentative definition support... yes
+checking stddef.h usability... yes
+checking stddef.h presence... yes
+checking for stddef.h... yes
+checking size of char... 1
+checking size of short... 2
+checking size of int... 4
+checking size of long... 8
+checking size of long long... 8
+checking size of void *... (cached) 8
+checking size of size_t... 8
+checking size of ptrdiff_t... 8
+checking stdint.h usability... yes
+checking stdint.h presence... yes
+checking for stdint.h... yes
+checking for a complete stdint.h... yes
+checking inttypes.h usability... yes
+checking inttypes.h presence... yes
+checking for inttypes.h... yes
+checking for a complete inttypes.h... yes
+checking sys/types.h usability... yes
+checking sys/types.h presence... yes
+checking for sys/types.h... yes
+checking for a complete sys/types.h... no
+checking size of float... 4
+checking size of double... 8
+checking for type _Bool... yes
+checking size of _Bool... 1
+checking for type long double... yes
+checking size of long double... 16
+checking for type float _Complex... yes
+checking size of float _Complex... 8
+checking PAGESIZE... no
+checking PAGE_SIZE... no
+checking sysconf(_SC_PAGESIZE)... 65536
+checking for sin in -lm... yes
+checking for Linux flavor... generic
+checking for working pthreads support... yes
+checking pthread.h usability... yes
+checking pthread.h presence... yes
+checking for pthread.h... yes
+checking for library containing pthread_setconcurrency... none required
+checking for library containing pthread_kill... none required
+checking for library containing pthread_kill_other_threads_np... no
+checking for library containing pthread_sigmask... none required
+checking for library containing pthread_rwlock_tryrdlock... none required
+checking for library containing pthread_rwlock_wrlock... none required
+checking whether the GCC __thread extension is supported.... yes
+checking for shared data cache line size... 128
+checking for CACHE_LINE_BYTES setting...   (default)  "128"
+checking hugetlbfs.h usability... yes
+checking hugetlbfs.h presence... yes
+checking for hugetlbfs.h... yes
+checking for hugetlbfs_unlinked_fd... yes
+checking for library containing shm_open... -lrt
+checking for working shm_open()... yes
+checking sys/statvfs.h usability... yes
+checking sys/statvfs.h presence... yes
+checking for sys/statvfs.h... yes
+checking for fstatvfs... yes
+checking for x86-64 cmpxchg16b support... no
+checking for x86 EBX register... no
+checking for x86 pause instruction... no
+checking for __builtin_clz... yes
+checking for __builtin_clzl... yes
+checking for __builtin_clzll... yes
+checking for __builtin_ctz... yes
+checking for __builtin_ctzl... yes
+checking for __builtin_ctzll... yes
+checking for PR_SET_PDEATHSIG... yes
+checking for PR_SET_PTRACER... yes
+checking for fork... yes
+checking for popen... yes
+checking for system... yes
+checking for clock_gettime()... yes
+checking for library containing clock_gettime... none required
+checking atomic implementation family (binary probe)... 1
+checking atomic32 implementation family (binary probe)... 1
+checking atomic64 implementation family (binary probe)... 1
+checking whether we are using the GNU C++ compiler... yes
+checking whether /usr/tce/packages/spectrum-mpi/spectrum-mpi-rolling-release-gcc-8.3.1/bin/mpicxx accepts -g... yes
+checking dependency style of /usr/tce/packages/spectrum-mpi/spectrum-mpi-rolling-release-gcc-8.3.1/bin/mpicxx... none
+checking how to run the C++ preprocessor... /usr/tce/packages/spectrum-mpi/spectrum-mpi-rolling-release-gcc-8.3.1/bin/mpicxx -E
+checking whether we are using the GNU C++ compiler... (cached) yes
+checking whether /usr/tce/packages/spectrum-mpi/spectrum-mpi-rolling-release-gcc-8.3.1/bin/mpicxx accepts -g... (cached) yes
+checking dependency style of /usr/tce/packages/spectrum-mpi/spectrum-mpi-rolling-release-gcc-8.3.1/bin/mpicxx... (cached) none
+checking how to run the C++ preprocessor... /usr/tce/packages/spectrum-mpi/spectrum-mpi-rolling-release-gcc-8.3.1/bin/mpicxx -E
+checking for full path expansion of CXXCPP... /usr/tce/packages/spectrum-mpi/spectrum-mpi-rolling-release-gcc-8.3.1/bin/mpicxx -E
+checking for working C++ preprocessor... yes
+checking for full path expansion of CXX... /usr/tce/packages/spectrum-mpi/spectrum-mpi-rolling-release-gcc-8.3.1/bin/mpicxx
+checking for working C++ compiler... yes
+checking working C++ compiler executables... yes
+checking for C++ compiler family... GNU
+checking for gcc version string... 8.3.1 20190311 (Red Hat 8.3.1-3)
+checking for C++ compiler sub-family... GNU
+checking for known buggy compilers... ok
+checking for PPC64 instruction support... yes
+checking for C++ compiler flag -Wall... yes
+checking for C++ compiler flag -Wpointer-arith... yes
+checking for C++ compiler flag -Wnested-externs... no/warning: cc1plus: warning: command line option '-Wnested-externs' is valid for C/ObjC but not for C++
+checking for C++ compiler flag -Wwrite-strings... yes
+checking for C++ compiler flag -Wmissing-format-attribute... yes
+checking for C++ compiler flag -Winit-self... yes
+checking for C++ compiler flag -Wvla... yes
+checking for C++ compiler flag -Wexpansion-to-defined... yes
+checking for C++ compiler flag -Woverlength-strings... yes
+checking for C++ compiler flag -Wclobbered... yes
+checking for C++ compiler flag -Wcast-function-type... yes
+checking for C++ compiler flag -Wempty-body... yes
+checking for C++ compiler flag -Wignored-qualifiers... yes
+checking for C++ compiler flag -Wimplicit-fallthrough... yes
+checking for C++ compiler flag -Wmissing-parameter-type... no/warning: cc1plus: warning: command line option '-Wmissing-parameter-type' is valid for C/ObjC but not for C++
+checking for C++ compiler flag -Wold-style-declaration... no/warning: cc1plus: warning: command line option '-Wold-style-declaration' is valid for C/ObjC but not for C++
+checking for C++ compiler flag -Wuninitialized... yes
+checking for C++ compiler flag -Wshift-negative-value... yes
+checking for C++ compiler flag -Wno-format-overflow... yes
+checking for C++ compiler flag -Wformat-overflow... yes
+checking for C++ compiler flag -Wno-format-truncation... yes
+checking for C++ compiler flag -Wformat-truncation... yes
+checking whether C++ compiler is g++ 11 or higher... no
+checking for C++ compiler flag -Wno-unused... yes
+checking for C++ compiler flag -Wunused... yes
+checking for C++ compiler flag -Wunused-result... yes
+checking for C++ compiler flag -Wno-unused-parameter... yes
+checking for C++ compiler flag -Wunused-parameter... yes
+checking for C++ compiler flag -Wno-address... yes
+checking for C++ compiler flag -Waddress... yes
+checking for buggy pthread.h mutex initializers... ok
+checking C++ compiler for PLATFORM_COMPILER_IDSTR... |COMPILER_FAMILY:GNU|COMPILER_VERSION:8.3.1|COMPILER_FAMILYID:1|STD:__STDC__,__cplusplus=201402L|misc:8.3.1 20190311 (Red Hat 8.3.1-3)|
+checking C++ compiler for PLATFORM_COMPILER_FAMILYID... 1
+checking C++ compiler for PLATFORM_COMPILER_ID... 10001
+checking C++ compiler for PLATFORM_COMPILER_VERSION... 525057
+checking C++ compiler for PLATFORM_COMPILER_CXX_LANGLVL... 201402
+checking CXX for debug vs. optimize compilation conflict... no
+checking for cxxLIBS setting...            (default)  ""
+checking for cxxLDFLAGS setting...         (default)  ""
+checking for working C++ exceptions... yes
+checking C++ compiler for __restrict__ keyword... yes
+checking C++ compiler for restrict qualifying typedefs... yes
+checking C++ compiler for 32-bit __sync atomics support... yes
+checking C++ compiler for 64-bit __sync atomics support... yes
+checking C++ compiler for __attribute__((__always_inline__))... yes
+checking C++ compiler for __attribute__((__noinline__))... yes
+checking C++ compiler for __attribute__((__malloc__))... yes
+checking C++ compiler for __attribute__((__warn_unused_result__))... yes
+checking C++ compiler for __attribute__((__used__))... yes
+checking C++ compiler for __attribute__((__may_alias__))... yes
+checking C++ compiler for __attribute__((__noreturn__))... yes
+checking C++ compiler for __attribute__((__const__))... yes
+checking C++ compiler for __attribute__((__pure__))... yes
+checking C++ compiler for __attribute__((__hot__))... yes
+checking C++ compiler for __attribute__((__cold__))... yes
+checking C++ compiler for __attribute__((__deprecated__))... yes
+checking C++ compiler for __attribute__((__common__))... yes
+checking C++ compiler for __attribute__((__fallthrough__))... yes
+checking C++ compiler for __attribute__((__format__))... yes
+checking C++ compiler for __attribute__((__format__)) on function pointers... yes
+checking C++ compiler for __attribute__((__format__)) on function pointers as arguments... yes
+checking for compiler flag -Wall... yes
+checking for compiler flag -Wextra... yes
+checking for compiler flag -Wunknown-pragmas... yes
+checking C++ compiler for pragma GCC diagnostic push/pop/ignored... yes
+checking C++ compiler for C++ attribute [[fallthrough]]... yes
+checking C++ compiler for C++ attribute [[clang::fallthrough]]... yes
+checking C++ compiler for __assume... no
+checking C++ compiler for __builtin_assume... no
+checking C++ compiler for __builtin_unreachable... yes
+checking C++ compiler for __builtin_expect... yes
+checking C++ compiler for __builtin_constant_p... yes
+checking C++ compiler for __builtin_prefetch... yes
+checking for __VA_ARGS__ support in C++... yes
+checking building C++ helper object... ok
+checking for working C++ to C linkage... yes
+checking for library containing socket... none required
+checking for library containing gethostbyname... none required
+checking ifaddrs.h usability... yes
+checking ifaddrs.h presence... yes
+checking for ifaddrs.h... yes
+checking for getifaddrs... yes
+checking for working UDP configuration... yes
+checking for GASNET_CSPAWN_CMD setting...  (default)  ""
+checking for MPI_CC setting...             (default)  "mpicc"
+checking for MPI_LIBS setting...           (default)  ""
+checking for MPIRUN_CMD setting...         (default)  "mpirun -np %N %C"
+checking for mpicc... /usr/tce/packages/spectrum-mpi/spectrum-mpi-rolling-release-gcc-8.3.1/bin/mpicc
+checking for full path expansion of MPI_CC... /usr/tce/packages/spectrum-mpi/spectrum-mpi-rolling-release-gcc-8.3.1/bin/mpicc
+checking if /usr/tce/packages/spectrum-mpi/spectrum-mpi-rolling-release-gcc-8.3.1/bin/mpicc appears functional... yes
+checking for MPI compiler family... GNU
+checking for gcc version string... 8.3.1 20190311 (Red Hat 8.3.1-3)
+checking for MPI compiler sub-family... GNU
+checking for MPI_CFLAGS setting...         (default)  "-g3"
+checking for C compiler flag -g3... yes
+checking for PPC64 instruction support... yes
+checking for C compiler flag -Wall... yes
+checking for C compiler flag -Wpointer-arith... yes
+checking for C compiler flag -Wnested-externs... yes
+checking for C compiler flag -Wwrite-strings... yes
+checking for C compiler flag -Wmissing-format-attribute... yes
+checking for C compiler flag -Winit-self... yes
+checking for C compiler flag -Wvla... yes
+checking for C compiler flag -Wexpansion-to-defined... yes
+checking for C compiler flag -Woverlength-strings... yes
+checking for C compiler flag -Wclobbered... yes
+checking for C compiler flag -Wcast-function-type... yes
+checking for C compiler flag -Wempty-body... yes
+checking for C compiler flag -Wignored-qualifiers... yes
+checking for C compiler flag -Wimplicit-fallthrough... yes
+checking for C compiler flag -Wmissing-parameter-type... yes
+checking for C compiler flag -Wold-style-declaration... yes
+checking for C compiler flag -Wuninitialized... yes
+checking for C compiler flag -Wshift-negative-value... yes
+checking for C compiler flag -Wno-format-overflow... yes
+checking for C compiler flag -Wformat-overflow... yes
+checking for C compiler flag -Wno-format-truncation... yes
+checking for C compiler flag -Wformat-truncation... yes
+checking whether C compiler is gcc 11 or higher... no
+checking for C compiler flag -Wno-unused... yes
+checking for C compiler flag -Wunused... yes
+checking for C compiler flag -Wunused-result... yes
+checking for C compiler flag -Wno-unused-parameter... yes
+checking for C compiler flag -Wunused-parameter... yes
+checking for C compiler flag -Wno-address... yes
+checking for C compiler flag -Waddress... yes
+checking for buggy pthread.h mutex initializers... ok
+checking for C compiler flag ... yes
+checking for flags required for C99 subset compliance... none required
+checking MPI compiler for PLATFORM_COMPILER_IDSTR... |COMPILER_FAMILY:GNU|COMPILER_VERSION:8.3.1|COMPILER_FAMILYID:1|STD:__STDC__,__STDC_VERSION__=201710L|misc:8.3.1 20190311 (Red Hat 8.3.1-3)|
+checking MPI compiler for PLATFORM_COMPILER_FAMILYID... 1
+checking MPI compiler for PLATFORM_COMPILER_ID... 1
+checking MPI compiler for PLATFORM_COMPILER_VERSION... 525057
+checking MPI compiler for PLATFORM_COMPILER_C_LANGLVL... 201710
+checking for mpirun... /usr/tce/packages/spectrum-mpi/spectrum-mpi-rolling-release-gcc-8.3.1/bin/mpirun
+checking for full path expansion of MPIRUN_CMD... /usr/tce/packages/spectrum-mpi/spectrum-mpi-rolling-release-gcc-8.3.1/bin/mpirun -np %N %C
+checking building MPI helper object... ok
+checking for working MPI configuration... yes
+checking MPI_CC for __restrict__ keyword... yes
+checking MPI_CC for restrict qualifying typedefs... yes
+checking MPI_CC for 32-bit __sync atomics support... yes
+checking MPI_CC for 64-bit __sync atomics support... yes
+checking MPI_CC for inline modifier... yes
+checking MPI_CC for working 'static inline'... yes
+checking MPI_CC for __attribute__((__always_inline__))... yes
+checking MPI_CC for __attribute__((__noinline__))... yes
+checking MPI_CC for __attribute__((__malloc__))... yes
+checking MPI_CC for __attribute__((__warn_unused_result__))... yes
+checking MPI_CC for __attribute__((__used__))... yes
+checking MPI_CC for __attribute__((__may_alias__))... yes
+checking MPI_CC for __attribute__((__noreturn__))... yes
+checking MPI_CC for __attribute__((__const__))... yes
+checking MPI_CC for __attribute__((__pure__))... yes
+checking MPI_CC for __attribute__((__hot__))... yes
+checking MPI_CC for __attribute__((__cold__))... yes
+checking MPI_CC for __attribute__((__deprecated__))... yes
+checking MPI_CC for __attribute__((__common__))... yes
+checking MPI_CC for __attribute__((__fallthrough__))... yes
+checking MPI_CC for __attribute__((__format__))... yes
+checking MPI_CC for __attribute__((__format__)) on function pointers... yes
+checking MPI_CC for __attribute__((__format__)) on function pointers as arguments... yes
+checking for compiler flag -Wall... yes
+checking for compiler flag -Wextra... yes
+checking for compiler flag -Wunknown-pragmas... yes
+checking MPI_CC for pragma GCC diagnostic push/pop/ignored... yes
+checking MPI_CC for __assume... no
+checking MPI_CC for __builtin_assume... no
+checking MPI_CC for __builtin_unreachable... yes
+checking MPI_CC for __builtin_expect... yes
+checking MPI_CC for __builtin_constant_p... yes
+checking MPI_CC for __builtin_prefetch... yes
+checking MPI_CC for value of MPI_VERSION... 3
+checking for working GASNet-required ISO C99 subset in MPI_CC... yes
+checking for MPI_Init_thread... yes
+checking for MPI_Query_thread... yes
+checking MPI_CC for debug vs. optimize compilation conflict... no
+checking sys/socket.h usability... yes
+checking sys/socket.h presence... yes
+checking for sys/socket.h... yes
+checking for socketpair() support... yes
+checking for O_ASYNC support... yes
+checking for ucx_info... /usr/bin/ucx_info
+checking for UCX_HOME setting...           (default)  "/usr"
+checking if /usr is the UCX library install prefix... yes
+checking for UCX_CFLAGS setting...         (default)  ""
+checking for UCX_LIBS setting...           (default)  "-lucp -lucs -luct -lucm"
+checking for UCX_LDFLAGS setting...        (default)  ""
+checking for working UCX configuration... yes
+configure: WARNING: It appears your system has the required support for ucx-conduit.
+However, ucx-conduit is still experimental, and may have performance and correctness bugs.
+You can enable experimental support with --enable-ucx.
+Otherwise, you can disable this message with --disable-ucx 
+checking for ibv_devinfo... /usr/bin/ibv_devinfo
+checking for IBV_HOME setting...           (default)  "/usr"
+checking if /usr is the IB Verbs library install prefix... yes
+checking for IBV_CFLAGS setting...         (default)  ""
+checking for IBV_LIBS setting...           (default)  "-libverbs"
+checking for IBV_LDFLAGS setting...        (default)  ""
+checking for working IB Verbs configuration... yes
+checking for appropriate atomics support required by ibv-conduit... yes
+checking for ibv_device.transport_type... yes
+checking for ibv_wc_status_str... yes
+checking for FH_CFLAGS setting...          (default)  "-fno-strict-aliasing"
+checking for ibv ODP support (Mellanox)... yes
+checking for ibv ODP support (RDMA Core)... no
+checking for fi_info... /usr/bin/fi_info
+checking for OFI_HOME setting...           (default)  "/usr"
+checking if /usr is the OFI libfabric install prefix... yes
+checking for OFI_CFLAGS setting...         (default)  ""
+checking for OFI_LIBS setting...           (default)  "-lfabric"
+checking for OFI_LDFLAGS setting...        (default)  ""
+checking for working OFI GASNet bindings... yes
+checking for appropriate atomics support required by ofi-conduit... yes
+configure: WARNING:
+The verbs;ofi_rxm OFI provider was detected on your system and the ofi-conduit has been
+configured for that provider. If that is not your desired provider, override this by using the
+--with-ofi-provider=<provider name> configure flag. See the ofi-conduit README for details.
+configure: WARNING: It appears your system has the required support for ofi-conduit.
+However, ofi-conduit is still experimental, and may have performance and correctness bugs.
+You can enable experimental support with --enable-ofi.
+Otherwise, you can disable this message with --disable-ofi 
+checking for sys/socket.h... (cached) yes
+checking sys/sockio.h usability... no
+checking sys/sockio.h presence... no
+checking for sys/sockio.h... no
+checking sys/uio.h usability... yes
+checking sys/uio.h presence... yes
+checking for sys/uio.h... yes
+checking netinet/tcp.h usability... yes
+checking netinet/tcp.h presence... yes
+checking for netinet/tcp.h... yes
+checking for socklen_t or its equivalent... socklen_t
+checking for setpgid... yes
+checking for setpgrp... yes
+checking whether setpgrp takes no argument... yes
+checking for PMI_HOME setting...           (default)  "/usr"
+checking for PMI_LDFLAGS setting...        (default)  ""
+checking for PMI_LIBS setting...           (default)  "probe"
+checking for PMI_Get_nidlist_ptr in -lpmi2... no
+checking for PMI_Get_nidlist_ptr in -lpmi... no
+checking for library containing PMIx_Init... no
+checking for library containing PMI2_Init... no
+checking for library containing PMI_Init... no
+checking for PMI spawner support... no
+checking for size_t... yes
+checking for working alloca.h... yes
+checking for alloca... yes
+checking for on_exit... yes
+checking for gethostid... yes
+checking for setenv... yes
+checking for unsetenv... yes
+checking for putenv... yes
+checking for getrlimit... yes
+checking for setrlimit... yes
+checking for getrlimit64... yes
+checking for setrlimit64... yes
+checking sys/resource.h usability... yes
+checking sys/resource.h presence... yes
+checking for sys/resource.h... yes
+checking sys/table.h usability... no
+checking sys/table.h presence... no
+checking for sys/table.h... no
+checking features.h usability... yes
+checking features.h presence... yes
+checking for features.h... yes
+checking for fopen64... yes
+checking for sigprocmask... yes
+checking for srand_deterministic... no
+checking for ffs... yes
+checking for declaration/definition of setenv... yes
+checking for declaration/definition of unsetenv... yes
+checking for declaration/definition of snprintf... yes
+checking for declaration/definition of vsnprintf... yes
+checking for isblank... yes
+checking for isascii... yes
+checking for toascii... yes
+checking for declaration/definition of isblank... yes
+checking for declaration/definition of isascii... yes
+checking for declaration/definition of toascii... yes
+checking for buggy ctype.h... ok
+checking execinfo.h usability... yes
+checking execinfo.h presence... yes
+checking for execinfo.h... yes
+checking for library containing backtrace... none required
+checking for backtrace... yes
+checking for backtrace_symbols... yes
+checking for addr2line... /usr/bin/addr2line
+checking for gdb... /usr/bin/gdb
+checking for gstack... /usr/bin/gstack
+checking for pstack... /usr/bin/pstack
+checking for pgdbg... no
+checking for idb... no
+checking for idb-e... no
+checking for dbx... no
+checking for lldb... no
+checking ucontext.h usability... yes
+checking ucontext.h presence... yes
+checking for ucontext.h... yes
+checking for printstack... no
+checking for usleep()... yes
+checking for library containing usleep... none required
+checking for nanosleep()... yes
+checking for library containing nanosleep... none required
+checking for clock_nanosleep()... yes
+checking for library containing clock_nanosleep... none required
+checking for nsleep()... yes
+checking for library containing nsleep... no
+entry point not found - disabled
+checking for sched_yield()... yes
+checking for library containing sched_yield... none required
+checking for syscall... yes
+checking syscall.h usability... yes
+checking syscall.h presence... yes
+checking for syscall.h... yes
+checking for unistd.h... (cached) yes
+checking for __NR_sched_setaffinity... yes
+checking for __NR_sched_getaffinity... yes
+checking for PLPA building mode... standalone
+checking for PLPA symbol prefix... gasneti_plpa_
+checking whether to use PLPA for cpu binding... yes
+checking for hwloc-info... /usr/bin/hwloc-info
+checking for HWLOC_HOME setting...         (default)  "/usr"
+checking if /usr is the hwloc install prefix... yes
+checking for HWLOC_CFLAGS setting...       (default)  ""
+checking for HWLOC_LIBS setting...         (default)  "-lhwloc"
+checking for HWLOC_LDFLAGS setting...      (default)  ""
+checking for libhwloc with API v1.0 or newer... yes
+checking for HWLOC_UTILS_HOME setting...   (default)  ""
+checking for hwloc-bind... /usr/bin/hwloc-bind
+checking for required features in hwloc-bind... yes
+checking for hwloc-calc... /usr/bin/hwloc-calc
+checking for required features in hwloc-calc... yes
+checking for working mmap()... yes
+checking for MAP_NORESERVE... yes
+checking for MAP_ANONYMOUS... yes
+checking for MAP_ANON... yes
+checking malloc.h usability... yes
+checking malloc.h presence... yes
+checking for malloc.h... yes
+checking for ptmalloc... yes
+checking for posix_memalign... yes
+checking for glibc... 2.17
+checking for __func__... yes
+checking sys/param.h usability... yes
+checking sys/param.h presence... yes
+checking for sys/param.h... yes
+checking for nm... /usr/bin/nm
+checking for GNU nm... yes
+checking for ar... /usr/bin/ar
+checking for ranlib... /usr/bin/ranlib
+checking for basename... /usr/bin/basename
+checking for dirname... /usr/bin/dirname
+checking for readlink... /usr/bin/readlink
+checking for time... /usr/bin/time
+checking for env... /usr/bin/env
+configure: updating cache ./config.cache
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating other/perlstart
+config.status: creating config-aux/Makefile
+config.status: creating other/Makefile
+config.status: creating other/Makefile-libgasnet.mak
+config.status: creating other/gasnet_tools-fragment.mak
+config.status: creating tests/Makefile
+config.status: creating Makefile
+config.status: creating other/mpirun_common
+config.status: creating other/fragment-head.mak
+config.status: creating other/fragment-body.mak
+config.status: creating other/Makefile-conduit.mak
+config.status: creating other/ammpi/Makefile
+config.status: creating other/amudp/Makefile
+config.status: creating other/contrib/Makefile
+config.status: creating other/contrib/gasnet_trace
+config.status: creating other/firehose/Makefile
+config.status: creating other/firehose/firehose.mak
+config.status: creating other/valgrind/Makefile
+config.status: creating mpi-conduit/Makefile
+config.status: creating mpi-conduit/conduit.mak
+config.status: creating mpi-conduit/contrib/Makefile
+config.status: creating mpi-conduit/contrib/gasnetrun_mpi
+config.status: creating udp-conduit/Makefile
+config.status: creating udp-conduit/conduit.mak
+config.status: creating smp-conduit/Makefile
+config.status: creating smp-conduit/conduit.mak
+config.status: creating ibv-conduit/Makefile
+config.status: creating ibv-conduit/conduit.mak
+config.status: creating ibv-conduit/contrib/Makefile
+config.status: creating ibv-conduit/contrib/gasnetrun_ibv
+config.status: creating ucx-conduit/Makefile
+config.status: creating ucx-conduit/conduit.mak
+config.status: creating ucx-conduit/contrib/Makefile
+config.status: creating ucx-conduit/contrib/gasnetrun_ucx
+config.status: creating aries-conduit/Makefile
+config.status: creating aries-conduit/conduit.mak
+config.status: creating aries-conduit/contrib/Makefile
+config.status: creating aries-conduit/contrib/gasnetrun_aries
+config.status: creating ofi-conduit/Makefile
+config.status: creating ofi-conduit/conduit.mak
+config.status: creating ofi-conduit/contrib/Makefile
+config.status: creating ofi-conduit/contrib/gasnetrun_ofi
+config.status: creating gasnet_config.h
+config.status: executing depfiles commands
+config.status: executing default commands
+--------------------------------------------------------------------
+configure warning summary:
+ 
+It appears your system has the required support for ucx-conduit.
+However, ucx-conduit is still experimental, and may have performance and correctness bugs.
+You can enable experimental support with --enable-ucx.
+Otherwise, you can disable this message with --disable-ucx 
+ 
+
+The verbs;ofi_rxm OFI provider was detected on your system and the ofi-conduit has been
+configured for that provider. If that is not your desired provider, override this by using the
+--with-ofi-provider=<provider name> configure flag. See the ofi-conduit README for details.
+ 
+It appears your system has the required support for ofi-conduit.
+However, ofi-conduit is still experimental, and may have performance and correctness bugs.
+You can enable experimental support with --enable-ofi.
+Otherwise, you can disable this message with --disable-ofi 
+ 
+----------------------------------------------------------------------
+GASNet configuration:
+
+ Portable conduits:
+ -----------------
+  Portable SMP-loopback conduit (smp)                ON     (auto)
+  Portable OpenFabrics Interfaces conduit (ofi)      OFF    (auto)
+  Portable UDP/IP conduit (udp)                      ON     (auto)
+  Portable MPI conduit (mpi)                         ON     (auto)
+
+ Native, high-performance conduits:
+ ---------------------------------
+  Unified Communication X conduit (ucx)              OFF    (auto)
+  InfiniBand IB Verbs conduit (ibv)                  ON     (auto)
+  Cray XC Aries conduit (aries)                      OFF    (not found)
+
+ Memory kinds:
+ ------------
+  GPUs with NVIDIA CUDA API (cuda-uva)               OFF    (not enabled)
+  GPUs with AMD HIP API (hip)                        OFF    (not enabled)
+
+ Some conduits and memory kinds require --enable-XXX configure flags and/or
+ additional variables providing the install location of vendor drivers.
+ See the GASNet documentation for details.
+
+ Misc Settings
+ -------------
+  MPI compatibility:      yes
+  Pthreads support:       yes
+  Segment config:         fast
+  PSHM support:           posix
+  Atomics support:        native
+  PMI support:            no
+----------------------------------------------------------------------
