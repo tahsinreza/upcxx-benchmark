@@ -19,7 +19,7 @@ cd release-ruby-ofi
 
 ========
 
-../configure --prefix=/usr/workspace/reza2/upcxx-2022.9.0/release-ruby-ofi-2/ --disable-mpi-compat --disable-ibv --enable-ofi --with-ofi-spawner=pmi --with-ofi-provider=psm2 --disable-ibv-xrc --with-gasnet=https://bitbucket.org/berkeleylab/gasnet/downloads/GASNet-stable.tar.gz
+../configure --prefix=/usr/workspace/reza2/upcxx-2022.9.0/release-ruby-ofi/ --disable-mpi-compat --disable-ibv --enable-ofi --with-ofi-spawner=pmi --with-ofi-provider=psm2 --disable-ibv-xrc --with-gasnet=https://bitbucket.org/berkeleylab/gasnet/downloads/GASNet-stable.tar.gz
 
 ========
 
