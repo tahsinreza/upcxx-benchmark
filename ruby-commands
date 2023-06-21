@@ -3,11 +3,23 @@ Intel Omni-Path Host Fabric Interface Adapter 100 Series
 
 ========
 
-module load gcc/8.3.1
+module load gcc/9.3.1
 
 ========
 
-../configure --prefix=/usr/workspace/reza2/upcxx-2022.3.0/release-ruby-ofi/ --disable-mpi-compat --disable-ibv --enable-ofi --with-ofi-spawner=pmi --with-ofi-provider=psm2
+wget https://bitbucket.org/berkeleylab/upcxx/downloads/upcxx-2022.9.0.tar.gz
+
+tar -xvzf upcxx-2022.9.0.tar.gz
+
+cd upcxx-2022.9.0
+
+mkdir release-ruby-ofi
+
+cd release-ruby-ofi
+
+========
+
+../configure --prefix=/usr/workspace/reza2/upcxx-2022.9.0/release-ruby-ofi-2/ --disable-mpi-compat --disable-ibv --enable-ofi --with-ofi-spawner=pmi --with-ofi-provider=psm2 --disable-ibv-xrc --with-gasnet=https://bitbucket.org/berkeleylab/gasnet/downloads/GASNet-stable.tar.gz
 
 ========
 
@@ -31,6 +43,7 @@ make[3]: *** [failure] Error 1
 make[2]: *** [do-run-tests] Error 1
 make[1]: *** [check] Error 2
 make: *** [check] Error 2
+(ignore the error messages)
 
 ========
 
@@ -55,11 +68,11 @@ appears to be working for the following networks:
 
 ========
 
-./bin/upcxx -std=c++17 -O3 -network=ofi -threadmode=seq ../example/prog-guide/hello-world.cpp
-./bin/upcxx -std=c++17 -g -network=ofi -threadmode=seq ../example/prog-guide/hello-world.cpp
+./bin/upcxx -std=c++17 -O3 -network=ofi -threadmode=seq -o hello-world.out ../example/prog-guide/hello-world.cpp
+./bin/upcxx -std=c++17 -g -network=ofi -threadmode=seq -o hello-world.out ../example/prog-guide/hello-world.cpp
 
-srun -N1 --ntasks-per-node=18 --overcommit -t24:00:00 --distribution=block a.out (works)
-srun -N1 --ntasks-per-node=20 --overcommit -t24:00:00 --distribution=block a.out (error)
+srun -N1 --ntasks-per-node=18 --overcommit -t24:00:00 --distribution=block hello-world.out (works)
+srun -N1 --ntasks-per-node=20 --overcommit -t24:00:00 --distribution=block hello-world.out (error)
 
-srun -N4 --ntasks-per-node=18 --overcommit -t24:00:00 --distribution=block a.out (works)
-srun -N4 --ntasks-per-node=20 --overcommit -t24:00:00 --distribution=block a.out (error)
+srun -N4 --ntasks-per-node=18 --overcommit -t24:00:00 --distribution=block hello-world.out (works)
+srun -N4 --ntasks-per-node=20 --overcommit -t24:00:00 --distribution=block hello-world.out (error)
